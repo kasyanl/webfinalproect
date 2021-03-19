@@ -14,32 +14,32 @@ public final class UpdateProductFromID {
         throw new UnsupportedOperationException();
     }
 
-    public static Product fineProductByID(InputNumber input, Product newProduct) {
-        MainMenu.menuUpdateProduct();
-        int select = input.readNumber();
-        switch (select) {
-            case 1:
-                selectCategory(input, newProduct);
-                break;
-            case 2:
-                selectName(input, newProduct);
-                break;
-            case 3:
-                selectPrice(input, newProduct);
-                break;
-            case 4:
-                selectDiscount(input, newProduct);
-                break;
-            default:
-                log.info("{}", SELECT_NON_FOUND);
-        }
-        return newProduct;
-    }
+//    public static Product fineProductByID(InputNumber input, Product newProduct) {
+//        MainMenu.menuUpdateProduct();
+//        int select = input.readNumber();
+//        switch (select) {
+//            case 1:
+//                selectCategory(input, newProduct);
+//                break;
+//            case 2:
+//                selectName(input, newProduct);
+//                break;
+//            case 3:
+//                selectPrice(input, newProduct);
+//                break;
+//            case 4:
+//                selectDiscount(input, newProduct);
+//                break;
+//            default:
+//                log.info("{}", SELECT_NON_FOUND);
+//        }
+//        return newProduct;
+//    }
 
     public static void selectCategory(InputNumber input, Product product) {
 
         String selectCategory = UpdateCategoryService.updateCategory(input);
-        Category category = Category.valueOf(selectCategory);
+        String category = String.valueOf(selectCategory);
         product.setCategory(category);
         ProductService.readProduct(product);
     }

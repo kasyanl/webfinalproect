@@ -3,12 +3,12 @@
           xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
           version="5.0">
     <servlet>
-        <servlet-name>AllStudents</servlet-name>
-        <servlet-class>controller.AllStudentsController</servlet-class>
+        <servlet-name>AllProducts</servlet-name>
+        <servlet-class>controller.AllProductController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AllStudents</servlet-name>
-        <url-pattern>/allstudents</url-pattern>
+        <servlet-name>AllProducts</servlet-name>
+        <url-pattern>/allproducts</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>AddStudent</servlet-name>

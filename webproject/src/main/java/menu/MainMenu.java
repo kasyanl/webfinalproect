@@ -37,15 +37,6 @@ public final class MainMenu {
 
     }
 
-    public static void menuUpdateProduct() {
-        log.info("{}{} Какое действие вы желаете сделать?" +
-                "\n1. Изменить категорию продукта." +
-                "\n2. Изменить наименование продукта." +
-                "\n3. Изменить цену продукта." +
-                "\n4. Изменить скидку продукта." +
-                "\n5. Выход в предыдущее меню. {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
-    }
-
     public static void menuSortDataBase() {
         log.info("{}{} Как отсортировать базу данных?" +
                 "\n1. По названиям продуктов." +

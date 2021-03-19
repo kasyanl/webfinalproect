@@ -1,5 +1,6 @@
 package controller;
 
+import enums.Category;
 import exceptions.StudentForUpdateNotFoundException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -19,14 +20,14 @@ public class EditStudentController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            new StudentService().update(Integer.parseInt(req.getParameter("id")), req.getParameter("firstName"),
-                    req.getParameter("lastName"), Integer.parseInt(req.getParameter("age")));
-            req.setAttribute("message", "Student " + req.getParameter("firstName") + " "
-                    + req.getParameter("lastName") + " successfully edited.");
+            new StudentService().update(Integer.parseInt(req.getParameter("id")), req.getParameter("category"),
+                    req.getParameter("name"), Double.parseDouble(req.getParameter("price")), Double.parseDouble(req.getParameter("discount")));
+            req.setAttribute("message", "Product " + req.getParameter("category") + " "
+                    + req.getParameter("name") + " successfully edited.");
             req.getRequestDispatcher("success.jsp").forward(req, resp);
         } catch (StudentForUpdateNotFoundException e) {
             e.printStackTrace();
-            req.setAttribute("message", "Student not found...");
+            req.setAttribute("message", "Product not found...");
             req.getRequestDispatcher("error.jsp").forward(req, resp);
         }
     }

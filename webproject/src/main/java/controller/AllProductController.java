@@ -10,11 +10,11 @@ import service.StudentService;
 
 import java.io.IOException;
 
-public class AllStudentsController extends HttpServlet {
+public class AllProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("studentList", new StudentService().findAll());
-        RequestDispatcher view = req.getRequestDispatcher("allstudents.jsp");
+        req.setAttribute("listProduct", new StudentService().findAll());
+        RequestDispatcher view = req.getRequestDispatcher("allproducts.jsp");
         view.forward(req, resp);
     }
 }

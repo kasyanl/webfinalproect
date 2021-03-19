@@ -18,9 +18,9 @@ public final class UpdateValueProduct {
         throw new UnsupportedOperationException();
     }
 
-    public static Product updateAnyProduct(InputNumber input, List<Product> listProduct) {
-        log.info("{}{} Введите ID продукта {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
-        int id = input.readNumber();
-        return UpdateProductFromID.fineProductByID(input, FinePersonalProduct.personalProductProcessor(listProduct, id));
-    }
+//    public static Product updateAnyProduct(InputNumber input, List<Product> listProduct) {
+//        log.info("{}{} Введите ID продукта {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
+//        int id = input.readNumber();
+//        return UpdateProductFromID.fineProductByID(input, FinePersonalProduct.personalProductProcessor(listProduct, id));
+//    }
 }

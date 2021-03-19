@@ -17,9 +17,10 @@ public class AddStudentController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        new StudentService().save(req.getParameter("firstName"),
-                req.getParameter("lastName"),
-                Integer.parseInt(req.getParameter("age")));
+        new StudentService().save(req.getParameter("category"),
+                req.getParameter("name"),
+                Double.parseDouble(req.getParameter("price")),
+                Double.parseDouble(req.getParameter("discount")));
 
         resp.sendRedirect("/webproject-1.0-SNAPSHOT");
     }

@@ -1,4 +1,4 @@
-<%@ page import="bean.Student" %><%--
+<%@ page import="bean.Product" %><%--
 <%--
   Created by IntelliJ IDEA.
   User: tehpol3
@@ -14,10 +14,10 @@
 <body>
 <h2>Delete process</h2>
 <h3>Are you really sure?</h3>
-<% Student student = (Student) request.getAttribute("student");
-    out.print(student.getFirstName() + " " + student.getLastName() + " dont wanna be deleted!");%>
+<% Product product = (Product) request.getAttribute("product");
+    out.print(product.getCategory() + " " + product.getName() + " dont wanna be deleted!");%>
 
-<form action="/webproject-1.0-SNAPSHOT/deletestudent?id=<%=student.getId()%>" method="post">
+<form action="/webproject-1.0-SNAPSHOT/deletestudent?id=<%=product.getId()%>" method="post">
     <input type="submit" value="Im sure.">
 </form>
 

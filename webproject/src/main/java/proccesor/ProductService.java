@@ -14,13 +14,13 @@ public final class ProductService {
         throw new UnsupportedOperationException();
     }
 
-    private static long idCounter;
+    private static int idCounter;
 
-    public static Product creatProduct(Category category, String name, double price, double discount) {
-        long id = idCounter;
+    public static Product creatProduct(String category, String name, double price, double discount) {
+        int id = idCounter;
         if (ProductRepository.listProduct.isEmpty()) id = 0;
         else if (!ProductRepository.listProduct.isEmpty()) {
-            long i = 1;
+            int i = 1;
             for (Product product : ProductRepository.listProduct) {
                 if (product.getId() == i) i++;
                 id = i;

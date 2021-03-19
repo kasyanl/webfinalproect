@@ -31,18 +31,18 @@ public final class MenuStartService implements ProductRepository {
                 case 3:
                     ReadProduct.finePersonalProduct(listProduct, inputNumber);
                     break;
-                case 4:
-                    AddProduct.addProduct(listProduct, CreateProduct.createNewProduct(inputNumber));
-                    log.info("{}{} Продукт успешно добавлен в базу! {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
-                    break;
+//                case 4:
+//                    AddProduct.addProduct(listProduct, CreateProduct.createNewProduct(inputNumber));
+//                    log.info("{}{} Продукт успешно добавлен в базу! {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
+//                    break;
                 case 5:
                     DeleteProduct.deleteProductService(listProduct, inputNumber);
                     log.info("{}{} Продукт удален из базы. {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
                     break;
-                case 6:
-                    UpdateValueProduct.updateAnyProduct(inputNumber, listProduct);
-                    log.info("{}{} Ваш продукт изменен! {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
-                    break;
+//                case 6:
+//                    UpdateValueProduct.updateAnyProduct(inputNumber, listProduct);
+//                    log.info("{}{} Ваш продукт изменен! {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
+//                    break;
                 case 7:
                     FindCategoryDiscount.fineCategory(listProduct, imputedMenu, inputNumber);
                     log.info("{}{} Скидка для категории установлена! {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
