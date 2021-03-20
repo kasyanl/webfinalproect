@@ -1,14 +1,6 @@
 package service;
 
-import bean.Product;
-import enums.Category;
-import proccesor.InputNumber;
-import proccesor.ProductService;
-import proccesor.UpdateCategoryService;
 import lombok.extern.slf4j.Slf4j;
-
-import static enums.MessageFormat.EMPTY_STRING;
-import static enums.MessageFormat.LINE_STRING;
 
 @Slf4j
 public final class CreateProduct {

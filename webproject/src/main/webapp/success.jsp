@@ -10,8 +10,10 @@
 <head>
     <title>Operation done successfully.</title>
 </head>
-<body>
+<body align="center">
+<jsp:include page="header.jsp"></jsp:include>
 <h1><%= request.getAttribute("message") %></h1>
 <a href="/webproject-1.0-SNAPSHOT">Home</a>
+<jsp:include page="/footer.jsp"></jsp:include>
 </body>
 </html>

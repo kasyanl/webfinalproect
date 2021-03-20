@@ -61,7 +61,7 @@ public class FindCategoryDiscount {
         for (Product product : listProduct) {
             if (product.getCategory().equals(category)) {
                 product.setDiscount(discount);
-                ProductService.readProduct(product);
+                ProductService2.readProduct(product);
                 newListForSelectDiscount.add(product);
             }
         }

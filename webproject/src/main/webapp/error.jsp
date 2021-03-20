@@ -10,8 +10,9 @@
 <head>
     <title>Some error...</title>
 </head>
-<body>
+<body align="center">
 <h1><%=request.getAttribute("error")%></h1>
 <a href="/webproject-1.0-SNAPSHOT">Home</a>
+<jsp:include page="/footer.jsp"></jsp:include>
 </body>
 </html>

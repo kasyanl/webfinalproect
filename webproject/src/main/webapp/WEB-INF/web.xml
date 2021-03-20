@@ -1,7 +1,7 @@
-<web-app  xmlns="https://jakarta.ee/xml/ns/jakartaee"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
-          version="5.0">
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
     <servlet>
         <servlet-name>AllProducts</servlet-name>
         <servlet-class>controller.AllProductController</servlet-class>
@@ -11,20 +11,20 @@
         <url-pattern>/allproducts</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>AddStudent</servlet-name>
-        <servlet-class>controller.AddStudentController</servlet-class>
+        <servlet-name>AddProduct</servlet-name>
+        <servlet-class>controller.AddProductController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AddStudent</servlet-name>
-        <url-pattern>/addstudent</url-pattern>
+        <servlet-name>AddProduct</servlet-name>
+        <url-pattern>/addproduct</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>DeleteStudent</servlet-name>
-        <servlet-class>controller.DeleteStudentController</servlet-class>
+        <servlet-name>DeleteProduct</servlet-name>
+        <servlet-class>controller.DeleteProductController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DeleteStudent</servlet-name>
-        <url-pattern>/deletestudent</url-pattern>
+        <servlet-name>DeleteProduct</servlet-name>
+        <url-pattern>/deleteproduct</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>ErrorController</servlet-name>
@@ -43,11 +43,107 @@
         <url-pattern>/success</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>EditStudentController</servlet-name>
-        <servlet-class>controller.EditStudentController</servlet-class>
+        <servlet-name>EditProductController</servlet-name>
+        <servlet-class>controller.EditProductController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>EditStudentController</servlet-name>
-        <url-pattern>/editstudent</url-pattern>
+        <servlet-name>EditProductController</servlet-name>
+        <url-pattern>/editproduct</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByID</servlet-name>
+        <servlet-class>controller.sort.SortByID</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByID</servlet-name>
+        <url-pattern>/sort/sortbyid</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByIDReverse</servlet-name>
+        <servlet-class>controller.sort.SortByIDReverse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByIDReverse</servlet-name>
+        <url-pattern>/sort/sortbyidreverse</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByCategory</servlet-name>
+        <servlet-class>controller.sort.SortByCategory</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByCategory</servlet-name>
+        <url-pattern>/sort/sortbycategory</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByCategoryReverse</servlet-name>
+        <servlet-class>controller.sort.SortByCategoryReverse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByCategoryReverse</servlet-name>
+        <url-pattern>/sort/sortbycategoryreverse</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByName</servlet-name>
+        <servlet-class>controller.sort.SortByName</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByName</servlet-name>
+        <url-pattern>/sort/sortbyname</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByNameReverse</servlet-name>
+        <servlet-class>controller.sort.SortByNameReverse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByNameReverse</servlet-name>
+        <url-pattern>/sort/sortbynamereverse</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByPrice</servlet-name>
+        <servlet-class>controller.sort.SortByPrice</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByPrice</servlet-name>
+        <url-pattern>/sort/sortbyprice</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByPriceReverse</servlet-name>
+        <servlet-class>controller.sort.SortByPriceReverse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByPriceReverse</servlet-name>
+        <url-pattern>/sort/sortbypricereverse</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByDiscount</servlet-name>
+        <servlet-class>controller.sort.SortByDiscount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByDiscount</servlet-name>
+        <url-pattern>/sort/sortbydiscount</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByDiscountReverse</servlet-name>
+        <servlet-class>controller.sort.SortByDiscountReverse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByDiscountReverse</servlet-name>
+        <url-pattern>/sort/sortbydiscountreverse</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByActualPrice</servlet-name>
+        <servlet-class>controller.sort.SortByActualPrice</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByActualPrice</servlet-name>
+        <url-pattern>/sort/sortbyactualprice</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortByActualPriceReverse</servlet-name>
+        <servlet-class>controller.sort.SortByActualPriceReverse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortByActualPriceReverse</servlet-name>
+        <url-pattern>/sort/sortbyactualpricereverse</url-pattern>
     </servlet-mapping>
 </web-app>

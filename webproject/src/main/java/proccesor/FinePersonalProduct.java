@@ -19,7 +19,7 @@ public final class FinePersonalProduct {
     public static Product personalProductProcessor(List<Product> listProduct, int id) {
         for (Product product : listProduct) {
             if (product.getId() == id) {
-                ProductService.readProduct(product);
+                ProductService2.readProduct(product);
                 return product;
             }
             log.info("{}{} Такого продукта не существует {}", EMPTY_STRING, LINE_STRING, LINE_STRING);

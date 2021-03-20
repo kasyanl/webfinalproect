@@ -1,16 +1,24 @@
 <%@ page import="bean.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.io.IOException" %>
-<%@ page import="repository.ProductDataBase" %>
+<%@ page import="proccesor.SortDataBase" %><%--
+  Created by IntelliJ IDEA.
+  User: kasya
+  Date: 20.03.2021
+  Time: 14:19
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-        <meta charset="UTF-8">
-    <title>Система учета продуктов</title>
+    <title>Учет продуктов</title>
 </head>
 <body align="center">
 <h1>Весь список продуктов</h1>
+<br>
+<h3>сортировка по установленной скидке</h3>
+<br>
+<jsp:include page="sorttypedown.jsp"></jsp:include>
 <table class="table" align="center">
     <tr>
         <th><b>ID</b></th>
@@ -22,8 +30,8 @@
         <th><b></b></th>
         <th><b></b></th>
     </tr>
-    <% ProductDataBase.createList();
-        List<Product> listProduct = (List<Product>) request.getAttribute("listProduct");
+    <% List<Product> listProduct = (List<Product>) request.getAttribute("listProduct");
+        SortDataBase.sortByDiscountReverse(listProduct);
         for (Product product : listProduct) {
             try {
                 out.print("<tr>" +
@@ -33,8 +41,8 @@
                         "<td>" + product.getPrice() + "</td>" +
                         "<td>" + product.getDiscount() + "</td>" +
                         "<td>" + product.getActualPrice() + "</td>" +
-                        "<td><a href=/webproject-1.0-SNAPSHOT/deleteproduct?id=" + product.getId() + ">Х</a></td>" +
-                        "<td><a href=/webproject-1.0-SNAPSHOT/editproduct?id=" + product.getId() + ">edit</a></td>" +
+                        "<td><a href=/webproject-1.0-SNAPSHOT/deletestudent?id=" + product.getId() + ">Х</a></td>" +
+                        "<td><a href=/webproject-1.0-SNAPSHOT/editstudent?id=" + product.getId() + ">edit</a></td>" +
                         "</tr>");
             } catch (IOException e) {
                 e.printStackTrace();
@@ -52,7 +60,7 @@
         <th><b></b></th>
     </tr>
 </table>
-
-<jsp:include page="sort/sorttypedown.jsp"></jsp:include>
+<a href="/webproject-1.0-SNAPSHOT">Back</a>
+<jsp:include page="sorttypedown.jsp"></jsp:include>
 </body>
 </html>

@@ -6,7 +6,7 @@ import menu.MainMenu;
 import proccesor.FinePersonalProduct;
 import proccesor.FineProductOfCategory;
 import proccesor.InputNumber;
-import proccesor.ProductService;
+import proccesor.ProductService2;
 import repository.ProductRepository;
 
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ReadProduct implements ProductRepository {
         if (listProduct.isEmpty()) {
             log.info("{}{} В базе отсутствуют элементы!{}", EMPTY_STRING, LINE_STRING, LINE_STRING);
         }
-        for (Product product : listProduct) ProductService.readProduct(product);
+        for (Product product : listProduct) ProductService2.readProduct(product);
         return listProduct;
     }
 

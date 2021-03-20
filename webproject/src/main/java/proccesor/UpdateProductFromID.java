@@ -1,8 +1,6 @@
 package proccesor;
 
 import bean.Product;
-import enums.Category;
-import menu.MainMenu;
 import lombok.extern.slf4j.Slf4j;
 
 import static enums.MessageFormat.*;
@@ -41,24 +39,24 @@ public final class UpdateProductFromID {
         String selectCategory = UpdateCategoryService.updateCategory(input);
         String category = String.valueOf(selectCategory);
         product.setCategory(category);
-        ProductService.readProduct(product);
+        ProductService2.readProduct(product);
     }
 
     public static void selectName(InputNumber input, Product product) {
         log.info("{}{} Введите новое название продукта: {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
         product.setName(input.readString());
-        ProductService.readProduct(product);
+        ProductService2.readProduct(product);
     }
 
     public static void selectPrice(InputNumber input, Product product) {
         log.info("{}{} Введите новую цену продукта: {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
         product.setPrice(input.readDouble());
-        ProductService.readProduct(product);
+        ProductService2.readProduct(product);
     }
 
     public static void selectDiscount(InputNumber input, Product product) {
         log.info("{}{} Введите новую скидку продукта: {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
         product.setDiscount(input.readDouble());
-        ProductService.readProduct(product);
+        ProductService2.readProduct(product);
     }
 }

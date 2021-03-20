@@ -49,7 +49,7 @@ public final class FineProductOfCategory {
         List<Product> newListForRead = new ArrayList<>();
         for (Product product : listProduct) {
             if (product.getCategory().equals(category)) {
-                ProductService.readProduct(product);
+                ProductService2.readProduct(product);
                 newListForRead.add(product);
             }
         }

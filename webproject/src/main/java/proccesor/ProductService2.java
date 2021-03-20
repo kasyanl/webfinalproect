@@ -1,16 +1,15 @@
 package proccesor;
 
 import bean.Product;
-import enums.Category;
 import repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
 @Slf4j
-public final class ProductService {
+public final class ProductService2 {
 
-    private ProductService() {
+    private ProductService2() {
         throw new UnsupportedOperationException();
     }
 

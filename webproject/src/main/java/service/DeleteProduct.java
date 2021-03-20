@@ -2,7 +2,7 @@ package service;
 
 import bean.Product;
 import proccesor.InputNumber;
-import proccesor.ProductService;
+import proccesor.ProductService2;
 import repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import java.util.List;
@@ -20,7 +20,7 @@ public class DeleteProduct implements ProductRepository {
     public static List<Product> deleteProductService(List<Product> listProduct, InputNumber inputNumber) {
         log.info("{}{} Введите ID продукта {}", EMPTY_STRING, LINE_STRING, LINE_STRING);
         int id = inputNumber.readNumber();
-        ProductService.deleteProduct(listProduct, id);
+        ProductService2.deleteProduct(listProduct, id);
         return listProduct;
     }
 }
