@@ -7,13 +7,11 @@
 </head>
 <body align="center">
 <jsp:include page="header.jsp"></jsp:include>
-<table class="table" align="center">
-    <tr>
-
+<jsp:include page="nav.jsp"></jsp:include>
 <h1>Система учета продуктов</h1>
 <h2><%= LocalDateTime.now().toString()%>
 </h2>
-<a href="/webproject-1.0-SNAPSHOT/allproducts">Список всех продуктов</a> | <a href="/webproject-1.0-SNAPSHOT/addproduct">Добавить новый продукт</a>
+<%--<a href="/webproject-1.0-SNAPSHOT/allproducts">Список всех продуктов</a> | <a href="/webproject-1.0-SNAPSHOT/addproduct">Добавить новый продукт</a>--%>
 <jsp:include page="/footer.jsp"></jsp:include>
 </body>
 </html>
