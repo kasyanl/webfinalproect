@@ -33,9 +33,7 @@
 </head>
 <body>
 <header>
-    <div class="header-bg">
-
-    </div>
+    <div class="header-bg"></div>
 </header>
 </body>
 </html>

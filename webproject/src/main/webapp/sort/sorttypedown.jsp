@@ -35,6 +35,5 @@
         <th><a href="/webproject-1.0-SNAPSHOT/sort/sortbyactualpricereverse">&#x21D3; </a></th>
     </tr>
 </table>
-<jsp:include page="/footer.jsp"></jsp:include>
 </body>
 </html>

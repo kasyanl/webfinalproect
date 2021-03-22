@@ -1,4 +1,5 @@
 <%@ page import="java.time.LocalDateTime" %>
+<%@ page import="repository.ProductDataBase" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -11,7 +12,7 @@
 <h1>Система учета продуктов</h1>
 <h2><%= LocalDateTime.now().toString()%>
 </h2>
-<%--<a href="/webproject-1.0-SNAPSHOT/allproducts">Список всех продуктов</a> | <a href="/webproject-1.0-SNAPSHOT/addproduct">Добавить новый продукт</a>--%>
-<jsp:include page="/footer.jsp"></jsp:include>
+<% ProductDataBase.createList();%>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

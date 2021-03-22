@@ -14,6 +14,8 @@
     <title>Учет продуктов</title>
 </head>
 <body align="center">
+<jsp:include page="/header.jsp"></jsp:include>
+<jsp:include page="/nav.jsp"></jsp:include>
 <h1>Весь список продуктов</h1>
 <br>
 <h3>сортировка по категории</h3>
@@ -62,5 +64,8 @@
 </table>
 <a href="/webproject-1.0-SNAPSHOT">Back</a>
 <<jsp:include page="sorttypedown.jsp"></jsp:include>
+<br>
+<br>
+<jsp:include page="/footer.jsp"></jsp:include>
 </body>
 </html>

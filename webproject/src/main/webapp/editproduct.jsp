@@ -2,20 +2,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Editing student.</title>
+    <title>Изменение данных.</title>
 </head>
 <body align="center">
-<h2>Insert values:</h2>
+<jsp:include page="/header.jsp"></jsp:include>
+<jsp:include page="/nav.jsp"></jsp:include>
+<h2>Замените необходимые данные:</h2>
 
 <% Product product = (Product) request.getAttribute("product"); %>
 <form action="/webproject-1.0-SNAPSHOT/editproduct?id=<%=product.getId()%>" method="post">
-    <input name="category" placeholder="category" type="text" value="<%=product.getCategory()%>"> <br/>
-    <input name="name" placeholder="name" type="text" value="<%=product.getName()%>"> <br/>
-    <input name="price" placeholder="price" type="text" value="<%=product.getPrice()%>"> <br/>
-    <input name="discount" placeholder="discount" type="text" value="<%=product.getDiscount()%>"> <br/>
-    <input type="submit" value="Save edit">
+    <input name="Категория" placeholder="Категория" type="text" value="<%=product.getCategory()%>"> <br/>
+    <input name="Название" placeholder="Название" type="text" value="<%=product.getName()%>"> <br/>
+    <input name="Цена" placeholder="Цена" type="text" value="<%=product.getPrice()%>"> <br/>
+    <input name="Скидка" placeholder="Скидка" type="text" value="<%=product.getDiscount()%>"> <br/>
+    <input type="submit" value="Сохранить изменения">
 </form>
-<a href="/webproject-1.0-SNAPSHOT">Back</a>
-<jsp:include page="/footer.jsp"></jsp:include>
+<a href="/webproject-1.0-SNAPSHOT">Возврат</a>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

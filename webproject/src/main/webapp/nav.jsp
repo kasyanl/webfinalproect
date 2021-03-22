@@ -12,9 +12,6 @@
     <ul> <!-- маркированный список -->
         <a href="/webproject-1.0-SNAPSHOT/allproducts">Список всех продуктов</a>
         <a href="/webproject-1.0-SNAPSHOT/addproduct">Добавить новый продукт</a>
-        <a href="/webproject-1.0-SNAPSHOT/addproduct">удалить продукт</a>
-        <a href="/webproject-1.0-SNAPSHOT/addproduct">изменить продукт</a>
-
     </ul> <!--конец списка-->
 </nav> <!-- конец навигации -->
 </body>

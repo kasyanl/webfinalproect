@@ -9,17 +9,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Deleting student</title>
+    <title>Удаление продукта</title>
 </head>
 <body align="center">
-<h2>Delete process</h2>
-<h3>Are you really sure?</h3>
+<jsp:include page="/header.jsp"></jsp:include>
+<jsp:include page="/nav.jsp"></jsp:include>
+<h2>Удаление продукта</h2>
+<h3>Вы действительно хотите удалить данный продукт?</h3>
 <% Product product = (Product) request.getAttribute("product");
-    out.print(product.getCategory() + " " + product.getName() + " dont wanna be deleted!");%>
+    out.print("Вы действительно хотите удалить "+ product.getCategory() + " " + product.getName() + " из базы?");%>
 
 <form action="/webproject-1.0-SNAPSHOT/deleteproduct?id=<%=product.getId()%>" method="post">
-    <input type="submit" value="Im sure.">
+    <input type="submit" value="Подтвердить">
 </form>
-<jsp:include page="/footer.jsp"></jsp:include>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

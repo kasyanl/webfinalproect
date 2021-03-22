@@ -1,16 +1,18 @@
 <%@ page import="bean.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.io.IOException" %>
-<%@ page import="repository.ProductDataBase" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Система учета продуктов</title>
 </head>
 <body align="center">
+<jsp:include page="/header.jsp"></jsp:include>
+<jsp:include page="/nav.jsp"></jsp:include>
 <h1>Весь список продуктов</h1>
+<jsp:include page="sort/sorttypedown.jsp"></jsp:include>
 <table class="table" align="center">
     <tr>
         <th><b>ID</b></th>
@@ -22,8 +24,7 @@
         <th><b></b></th>
         <th><b></b></th>
     </tr>
-    <% ProductDataBase.createList();
-        List<Product> listProduct = (List<Product>) request.getAttribute("listProduct");
+    <% List<Product> listProduct = (List<Product>) request.getAttribute("listProduct");
         for (Product product : listProduct) {
             try {
                 out.print("<tr>" +
@@ -54,5 +55,8 @@
 </table>
 
 <jsp:include page="sort/sorttypedown.jsp"></jsp:include>
+<br>
+<br>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

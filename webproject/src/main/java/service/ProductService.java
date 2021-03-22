@@ -44,9 +44,17 @@ public class ProductService {
         return (price - (price * discount / 100));
     }
 
-    public Optional<Product> findById(int id){
-        if(id >= ProductDataBase.listProduct.size()) return Optional.empty();
-        else return Optional.of(ProductDataBase.listProduct.get(id));
+    public Optional<Product> findById(int id) {
+        for (Product product : ProductRepository.listProduct) {
+            if (product.getId() == id) return Optional.of(product);
+
+//        }
+//        if(id >= ProductDataBase.listProduct.size()) return Optional.empty();
+//        else return Optional.of(ProductDataBase.listProduct.get(id));
+////        if(id >= ProductDataBase.listProduct.size()) return Optional.empty();
+//        else return Optional.of(ProductDataBase.listProduct.get(id));
+        }
+        return Optional.empty();
     }
 
     public List<Product> findAll(){
