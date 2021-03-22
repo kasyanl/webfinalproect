@@ -14,8 +14,8 @@
     <title>Учет продуктов</title>
 </head>
 <body align="center">
-<jsp:include page="/header.jsp"></jsp:include>
-<jsp:include page="/nav.jsp"></jsp:include>
+<jsp:include page="headersort.jsp"></jsp:include>
+<jsp:include page="navsort.jsp"></jsp:include>
 <h1>Весь список продуктов</h1>
 <br>
 <h3>сортировка по названию продукта</h3>
