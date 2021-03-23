@@ -10,7 +10,6 @@
 </head>
 <body align="center">
 <jsp:include page="/header.jsp"></jsp:include>
-<jsp:include page="/nav.jsp"></jsp:include>
 <h1>Весь список продуктов</h1>
 <jsp:include page="sort/sorttypedown.jsp"></jsp:include>
 <table class="table" align="center">
@@ -53,10 +52,11 @@
         <th><b></b></th>
     </tr>
 </table>
-
 <jsp:include page="sort/sorttypedown.jsp"></jsp:include>
+<a href="/webproject-1.0-SNAPSHOT/allproduct" target="content">Back</a>
 <br>
 <br>
+
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

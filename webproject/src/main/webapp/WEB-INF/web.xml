@@ -146,4 +146,12 @@
         <servlet-name>SortByActualPriceReverse</servlet-name>
         <url-pattern>/sort/sortbyactualpricereverse</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>FirstMenu</servlet-name>
+        <servlet-class>controller.FirstMenu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstMenu</servlet-name>
+        <url-pattern>/menu/content</url-pattern>
+    </servlet-mapping>
 </web-app>

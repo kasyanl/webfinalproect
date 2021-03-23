@@ -12,6 +12,7 @@
 </head>
 <body>
 <div face="arial" size="+1">
+    <li><a href="/webproject-1.0-SNAPSHOT/menu/content" target="content">Главная</a>
     <li><a href="/webproject-1.0-SNAPSHOT/allproducts" target="content">Список всех продуктов</a>
     <li><a href="/webproject-1.0-SNAPSHOT/addproduct" target="content">Добавить новый продукт</a>
     </div>

@@ -12,7 +12,6 @@
 </head>
 <body align="center">
 <jsp:include page="/header.jsp"></jsp:include>
-<jsp:include page="/nav.jsp"></jsp:include>
 <h1><%=request.getAttribute("error")%></h1>
 <a href="/webproject-1.0-SNAPSHOT" target="content">Home</a>
 <jsp:include page="footer.jsp"></jsp:include>

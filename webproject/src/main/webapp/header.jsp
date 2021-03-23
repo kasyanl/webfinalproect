@@ -21,7 +21,6 @@
         }
         .header-bg {
             background: url(img/topImg.jpg) repeat-x center bottom;
-            /* Животные */
             height: 250px; /* Высота шапки */
             text-align: center; /* Выравнивание по центру */
         }

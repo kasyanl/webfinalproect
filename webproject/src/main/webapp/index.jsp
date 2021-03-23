@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Система учета продуктов</title>
-
 </head>
 <frameset cols="300,*">
     <frame src="menu/sidebar.jsp" name="sidebar">
