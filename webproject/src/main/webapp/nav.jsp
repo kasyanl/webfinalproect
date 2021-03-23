@@ -10,8 +10,8 @@
 <body>
 <nav> <!-- начало навигации -->
     <ul> <!-- маркированный список -->
-        <a href="/webproject-1.0-SNAPSHOT/allproducts">Список всех продуктов</a>
-        <a href="/webproject-1.0-SNAPSHOT/addproduct">Добавить новый продукт</a>
+        <a href="/webproject-1.0-SNAPSHOT/allproducts" target="content">Список всех продуктов</a>
+        <a href="/webproject-1.0-SNAPSHOT/addproduct" target="content">Добавить новый продукт</a>
     </ul> <!--конец списка-->
 </nav> <!-- конец навигации -->
 </body>

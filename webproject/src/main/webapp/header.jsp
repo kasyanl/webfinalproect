@@ -15,9 +15,9 @@
     <style>
         body { margin: 0; }
         header {
-            /*display: block;*/
-            /*background:url(img/topImg.jpg) repeat-x;*/
-            /*!* Градиент *!*/
+            display: block;
+            background:url(img/topImg.jpg) repeat-x;
+            /* Градиент */
         }
         .header-bg {
             background: url(img/topImg.jpg) repeat-x center bottom;

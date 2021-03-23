@@ -15,7 +15,7 @@
     <input name="discount" placeholder="Enter discount" type="text"> <br/>
     <input type="submit" value="Save">
 </form>
-<a href="/webproject-1.0-SNAPSHOT">Back</a>
+<a href="/webproject-1.0-SNAPSHOT" target="content">Back</a>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

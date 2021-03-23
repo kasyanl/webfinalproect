@@ -43,8 +43,8 @@
                         "<td>" + product.getPrice() + "</td>" +
                         "<td>" + product.getDiscount() + "</td>" +
                         "<td>" + product.getActualPrice() + "</td>" +
-                        "<td><a href=/webproject-1.0-SNAPSHOT/deleteproduct?id=" + product.getId() + ">Х</a></td>" +
-                        "<td><a href=/webproject-1.0-SNAPSHOT/editproduct?id=" + product.getId() + ">edit</a></td>" +
+                        "<td><a href=/webproject-1.0-SNAPSHOT/deleteproduct?id=" + product.getId() + " target=\"content\">Х</a></td>" +
+                        "<td><a href=/webproject-1.0-SNAPSHOT/editproduct?id=" + product.getId() + " target=\"content\">edit</a></td>" +
                         "</tr>");
             } catch (IOException e) {
                 e.printStackTrace();
@@ -62,7 +62,7 @@
         <th><b></b></th>
     </tr>
 </table>
-<a href="/webproject-1.0-SNAPSHOT">Back</a>
+<a href="/webproject-1.0-SNAPSHOT" target="content">Back</a>
 <jsp:include page="sorttypedown.jsp"></jsp:include>
 <br>
 <br>

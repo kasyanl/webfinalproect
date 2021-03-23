@@ -17,7 +17,7 @@
     <input name="Скидка" placeholder="Скидка" type="text" value="<%=product.getDiscount()%>"> <br/>
     <input type="submit" value="Сохранить изменения">
 </form>
-<a href="/webproject-1.0-SNAPSHOT">Возврат</a>
+<a href="/webproject-1.0-SNAPSHOT" target="content">Возврат</a>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

@@ -2,6 +2,7 @@ package service;
 
 import bean.Product;
 import exceptions.StudentForUpdateNotFoundException;
+import proccesor.SortDataBase;
 import repository.ProductDataBase;
 import repository.ProductRepository;
 
@@ -10,32 +11,31 @@ import java.util.Optional;
 
 public class ProductService {
 
-    private static int idCounter;
 
     public void save(String category, String name, double price, double discount){
-        int id = idCounter;
-        if (ProductRepository.listProduct.isEmpty()) id= 0;
-        else if (!ProductRepository.listProduct.isEmpty()) {
+        int id = 0;
+       if (!ProductRepository.listProduct.isEmpty()) {
+            SortDataBase.sortById(ProductRepository.listProduct);
             int i = 1;
             for (Product product : ProductRepository.listProduct) {
                 if (product.getId() == i) i++;
                 id = i;
             }
-        } else id = ++idCounter;
+        } else id = ProductRepository.listProduct.size();
         double actualPrice = calculating(price, discount);
         ProductDataBase.listProduct.add(new Product(id, category, name, price, discount, actualPrice));
     }
 
-    public static Product creatProduct(int id, String category, String name, double price, double discount) {
-        id = idCounter;
-        if (ProductRepository.listProduct.isEmpty()) id= 0;
-        else if (!ProductRepository.listProduct.isEmpty()) {
+    public static Product creatProduct(String category, String name, double price, double discount) {
+        int id = 0;
+        if (!ProductRepository.listProduct.isEmpty()) {
+            SortDataBase.sortById(ProductRepository.listProduct);
             int i = 1;
             for (Product product : ProductRepository.listProduct) {
                 if (product.getId() == i) i++;
                 id = i;
             }
-        } else id = ++idCounter;
+        } else id = ProductRepository.listProduct.size();
         double actualPrice = calculating(price, discount);
         return new Product(id, category, name, price, discount, actualPrice);
     }
@@ -47,12 +47,6 @@ public class ProductService {
     public Optional<Product> findById(int id) {
         for (Product product : ProductRepository.listProduct) {
             if (product.getId() == id) return Optional.of(product);
-
-//        }
-//        if(id >= ProductDataBase.listProduct.size()) return Optional.empty();
-//        else return Optional.of(ProductDataBase.listProduct.get(id));
-////        if(id >= ProductDataBase.listProduct.size()) return Optional.empty();
-//        else return Optional.of(ProductDataBase.listProduct.get(id));
         }
         return Optional.empty();
     }
