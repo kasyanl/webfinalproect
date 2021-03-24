@@ -32,8 +32,8 @@ public class ProductDataBase implements ProductRepository {
         listProduct.add(ProductService.creatProduct("MEAT", "Pork", 50.20, 30.0));
         listProduct.add(ProductService.creatProduct("MEAT", "Beef", 66.15, 00.0));
         listProduct.add(ProductService.creatProduct("MEAT", "Chicken meat", 15.10, 00.0));
-        listProduct.add(ProductService.creatProduct("ALCOHOLIC BEVERAGES", "Beer", 10.5, 00.0));
-        listProduct.add(ProductService.creatProduct("ALCOHOLIC BEVERAGES", "Whiskey", 100.00, 00.0));
-        listProduct.add(ProductService.creatProduct("ALCOHOLIC BEVERAGES", "Wine", 40.10, 00.0));
+        listProduct.add(ProductService.creatProduct("ALCOHOLIC_BEVERAGES", "Beer", 10.5, 00.0));
+        listProduct.add(ProductService.creatProduct("ALCOHOLIC_BEVERAGES", "Whiskey", 100.00, 00.0));
+        listProduct.add(ProductService.creatProduct("ALCOHOLIC_BEVERAGES", "Wine", 40.10, 00.0));
     }
 }

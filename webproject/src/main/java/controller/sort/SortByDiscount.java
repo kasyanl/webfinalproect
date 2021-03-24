@@ -9,10 +9,12 @@ import service.ProductService;
 
 import java.io.IOException;
 
+import static repository.ProductRepository.listProduct;
+
 public class SortByDiscount extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("listProduct", new ProductService().findAll());
+        req.setAttribute("listProduct", new ProductService().sortList(listProduct, 9));
         RequestDispatcher view = req.getRequestDispatcher("sortbydiscount.jsp");
         view.forward(req, resp);
     }

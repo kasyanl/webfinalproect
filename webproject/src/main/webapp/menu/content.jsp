@@ -11,7 +11,7 @@
 <head>
     <title>Учет продуктов</title>
 </head>
-<body align="center">
+<body align="center" bgcolor="#CCFFCC">
 <jsp:include page="/header.jsp"></jsp:include>
 <jsp:include page="/nav.jsp"></jsp:include>
 <h1>Система учета продуктов</h1>

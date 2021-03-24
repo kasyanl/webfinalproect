@@ -19,8 +19,11 @@ public class EditProductController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            new ProductService().update(Integer.parseInt(req.getParameter("id")), req.getParameter("category"),
-                    req.getParameter("name"), Double.parseDouble(req.getParameter("price")), Double.parseDouble(req.getParameter("discount")));
+            new ProductService().update(Integer.parseInt(req.getParameter("id")),
+                    req.getParameter("category"),
+                    req.getParameter("name"),
+                    Double.parseDouble(req.getParameter("price")),
+                    Double.parseDouble(req.getParameter("discount")));
             req.setAttribute("message", "Product " + req.getParameter("category") + " "
                     + req.getParameter("name") + " successfully edited.");
             req.getRequestDispatcher("success.jsp").forward(req, resp);

@@ -11,8 +11,8 @@
 <head>
     <title>Удаление продукта</title>
 </head>
-<body align="center">
-<jsp:include page="/header.jsp"></jsp:include>
+<body align="center" bgcolor="#CCFFCC">
+<jsp:include page="header.jsp"></jsp:include>
 <h2>Удаление продукта</h2>
 <h3>Вы действительно хотите удалить данный продукт?</h3>
 <% Product product = (Product) request.getAttribute("product");

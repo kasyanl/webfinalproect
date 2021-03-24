@@ -13,7 +13,7 @@
 <head>
     <title>Учет продуктов</title>
 </head>
-<body align="center">
+<body align="center" bgcolor="#CCFFCC">
 <jsp:include page="header.jsp"></jsp:include>
 <h1>Весь список продуктов</h1>
 <br>
@@ -32,7 +32,6 @@
         <th><b></b></th>
     </tr>
     <% List<Product> listProduct = (List<Product>) request.getAttribute("listProduct");
-        SortDataBase.sortByIdReverse(listProduct);
         for (Product product : listProduct) {
             try {
                 out.print("<tr>" +
