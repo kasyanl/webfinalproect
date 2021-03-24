@@ -22,6 +22,6 @@ public class AddProductController extends HttpServlet {
                 Double.parseDouble(req.getParameter("price")),
                 Double.parseDouble(req.getParameter("discount")));
 
-        resp.sendRedirect("/webproject-1.0-SNAPSHOT/allproduct");
+        resp.sendRedirect("/webproject-1.0-SNAPSHOT/menu/content");
     }
 }
