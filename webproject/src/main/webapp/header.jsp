@@ -19,6 +19,7 @@
             top: 40px;
         }
     </style>
+    <title></title>
 </head>
 <body>
 <header>

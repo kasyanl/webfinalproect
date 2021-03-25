@@ -75,6 +75,7 @@ public class ProductService {
         product.setName(name);
         product.setPrice(price);
         product.setDiscount(discount);
+        product.setActualPrice(calculating(product.getPrice(), product.getDiscount()));
     }
 
     public List<Product> fineCategoryForRead(List<Product> listProduct, String category) {
