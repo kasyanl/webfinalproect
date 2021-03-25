@@ -2,19 +2,13 @@ package service;
 
 import bean.Product;
 
-import exceptions.StudentForUpdateNotFoundException;
-import proccesor.ProductService2;
-import proccesor.SortDataBase;
+import exceptions.ProductForUpdateNotFoundException;
 import repository.ProductDataBase;
 import repository.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
-import static enums.MessageFormat.EMPTY_STRING;
-import static enums.MessageFormat.LINE_STRING;
-
 
 public class ProductService {
 
@@ -66,18 +60,17 @@ public class ProductService {
         listProduct.removeIf(nextProduct -> nextProduct.getId() == idProduct);
     }
 
-    public static List<Product> read (List<Product> listProduct, int id) {
+    public static void read (List<Product> listProduct, int id) {
         List<Product> newListForRead = new ArrayList<>();
         for (Product product : listProduct) {
             if (product.getId() == id) {
                 newListForRead.add(product);
             }
         }
-        return newListForRead;
     }
 
-    public void update(int id, String category, String name, double price, double discount) throws StudentForUpdateNotFoundException {
-        Product product = findById(id).orElseThrow(StudentForUpdateNotFoundException::new);
+    public void update(int id, String category, String name, double price, double discount) throws ProductForUpdateNotFoundException {
+        Product product = findById(id).orElseThrow(ProductForUpdateNotFoundException::new);
         product.setCategory(category);
         product.setName(name);
         product.setPrice(price);

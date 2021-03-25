@@ -1,6 +1,6 @@
 package controller;
 
-import exceptions.StudentForUpdateNotFoundException;
+import exceptions.ProductForUpdateNotFoundException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ import java.io.IOException;
 public class EditProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("product", new ProductService().findById(Integer.parseInt(req.getParameter("id"))).get()); //todo
+        req.setAttribute("product", new ProductService().findById(Integer.parseInt(req.getParameter("id"))).get());
         req.getRequestDispatcher("editproduct.jsp").forward(req, resp);
     }
 
@@ -27,7 +27,7 @@ public class EditProductController extends HttpServlet {
             req.setAttribute("message", "Product " + req.getParameter("category") + " "
                     + req.getParameter("name") + " successfully edited.");
             req.getRequestDispatcher("success.jsp").forward(req, resp);
-        } catch (StudentForUpdateNotFoundException e) {
+        } catch (ProductForUpdateNotFoundException e) {
             e.printStackTrace();
             req.setAttribute("message", "Product not found...");
             req.getRequestDispatcher("error.jsp").forward(req, resp);

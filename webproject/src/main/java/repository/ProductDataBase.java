@@ -1,9 +1,6 @@
 package repository;
 
-import bean.Product;
 import service.ProductService;
-
-import java.util.List;
 
 public class ProductDataBase implements ProductRepository {
 
@@ -11,9 +8,8 @@ public class ProductDataBase implements ProductRepository {
         throw new UnsupportedOperationException();
     }
 
-    public static List<Product> createList() {
+    public static void createList() {
 
-        return listProduct;
     }
 
     static {

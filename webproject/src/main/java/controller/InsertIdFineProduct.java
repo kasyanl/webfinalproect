@@ -22,7 +22,6 @@ public class InsertIdFineProduct extends HttpServlet implements ProductRepositor
             return;
         }
         Product product = optionalProduct.get();
-        // ProductService.read(listProduct, product.getId());
         req.setAttribute("product", product);
         req.getRequestDispatcher("insertidfineproduct.jsp").forward(req, resp);
     }

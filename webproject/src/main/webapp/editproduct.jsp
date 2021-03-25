@@ -4,26 +4,31 @@
 <head>
     <title>Изменение данных.</title>
 </head>
-<body align="center" bgcolor="#CCFFCC">
-<jsp:include page="/header.jsp"></jsp:include>
+<body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}/img/backgroung.png">
+<%@include file="header.jsp"%>
 <h2>Замените необходимые данные:</h2>
 <% Product product = (Product) request.getAttribute("product"); %>
-<form action="/webproject-1.0-SNAPSHOT/editproduct?id=<%=product.getId()%>" method="post">
-    <select <%=product.getCategory()%> name="category">
-        <option value="<%=product.getCategory()%>"><%=product.getCategory()%></option>
-        <option value="FRUITS">FRUITS</option>
-        <option value="BERRIES">BERRIES</option>
-        <option value="VEGETABLES">VEGETABLES</option>
-        <option value="MILK_PRODUCT">MILK_PRODUCT</option>
-        <option value="MEAT">MEAT</option>
-        <option value="ALCOHOLIC_BEVERAGES">ALCOHOLIC_BEVERAGES</option>
-    </select><br/>
-    <input name="name" placeholder="название" type="text" value="<%=product.getName()%>"> <br/>
-    <input name="price" placeholder="цена" type="text" value="<%=product.getPrice()%>"> <br/>
-    <input name="discount" placeholder="скидка" type="text" value="<%=product.getDiscount()%>"> <br/>
+<form action="${pageContext.request.contextPath}/editproduct?id=<%=product.getId()%>" method="post">
+    <label>
+        <select <%=product.getCategory()%> name="category">
+            <option value="<%=product.getCategory()%>"><%=product.getCategory()%></option>
+            <option value="FRUITS">FRUITS</option>
+            <option value="BERRIES">BERRIES</option>
+            <option value="VEGETABLES">VEGETABLES</option>
+            <option value="MILK_PRODUCT">MILK_PRODUCT</option>
+            <option value="MEAT">MEAT</option>
+            <option value="ALCOHOLIC_BEVERAGES">ALCOHOLIC_BEVERAGES</option>
+        </select>
+    </label><br/>
+    <label><input name="name" placeholder="название" type="text" value="<%=product.getName()%>"></label> <br/>
+    <label><input name="price" placeholder="цена" type="text" value="<%=product.getPrice()%>"></label> <br/>
+    <label><input name="discount" placeholder="скидка" type="text" value="<%=product.getDiscount()%>"></label> <br/>
     <input type="submit" value="Сохранить изменения">
 </form>
-<a href="/webproject-1.0-SNAPSHOT/menu/content" target="content">Home</a>
-<jsp:include page="footer.jsp"></jsp:include>
-</body>
+<a href="${pageContext.request.contextPath}/menu/content" target="content">Home</a>
+<br>
+<br>
+<%@include file="footer.jsp"%>
+<br>
+<br>
 </html>

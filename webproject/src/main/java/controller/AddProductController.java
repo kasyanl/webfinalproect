@@ -16,7 +16,7 @@ public class AddProductController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         new ProductService().save(req.getParameter("category"),
                 req.getParameter("name"),
                 Double.parseDouble(req.getParameter("price")),

@@ -8,10 +8,10 @@
     <meta charset="UTF-8">
     <title>Система учета продуктов</title>
 </head>
-<body align="center" bgcolor="#CCFFCC">
-<jsp:include page="header.jsp"></jsp:include>
+<body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}/img/backgroung.png">
+<%@include file="header.jsp"%>
 <h1>Весь список продуктов</h1>
-<jsp:include page="sort/sorttypedown.jsp"></jsp:include>
+<%@include file="sort/sorttypedown.jsp"%>
 <table class="table" align="center">
     <tr>
         <td><b>ID</b></td>
@@ -52,11 +52,12 @@
         <th><b></b></th>
     </tr>
 </table>
-<jsp:include page="sort/sorttypedown.jsp"></jsp:include>
-<a href="/webproject-1.0-SNAPSHOT/allproduct" target="content">Back</a>
+<%@include file="sort/sorttypedown.jsp"%>
+<a href="${pageContext.request.contextPath}/menu/content" target="content">Back</a>
 <br>
 <br>
-
-<jsp:include page="footer.jsp"></jsp:include>
+<%@include file="footer.jsp"%>
+<br>
+<br>
 </body>
 </html>

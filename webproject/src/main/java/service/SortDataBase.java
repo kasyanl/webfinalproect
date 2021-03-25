@@ -1,4 +1,4 @@
-package proccesor;
+package service;
 
 import bean.Product;
 import repository.ProductRepository;

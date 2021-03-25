@@ -3,25 +3,30 @@
 <head>
     <title>Добавление нового продукта</title>
 </head>
-<body align="center" bgcolor="#CCFFCC">
-<jsp:include page="header.jsp"></jsp:include>
+<body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}/img/backgroung.png">
+<%@include file="header.jsp"%>
 <h2>Добавление продукта:</h2>
 
-<form action="/webproject-1.0-SNAPSHOT/addproduct" method="post">
-    <select name="category">
-        <option value="FRUITS">FRUITS</option>
-        <option value="BERRIES">BERRIES</option>
-        <option value="VEGETABLES">VEGETABLES</option>
-        <option value="MILK_PRODUCT">MILK_PRODUCT</option>
-        <option value="MEAT">MEAT</option>
-        <option value="ALCOHOLIC_BEVERAGES">ALCOHOLIC_BEVERAGES</option>
-    </select><br/>
-    <input name="name" placeholder="Название" type="text"> <br/>
-    <input name="price" placeholder="цена" type="text"> <br/>
-    <input name="discount" placeholder="Скидка" type="text"> <br/>
+<form action="${pageContext.request.contextPath}/addproduct" method="post">
+    <label><select name="category">
+            <option value="FRUITS">FRUITS</option>
+            <option value="BERRIES">BERRIES</option>
+            <option value="VEGETABLES">VEGETABLES</option>
+            <option value="MILK_PRODUCT">MILK_PRODUCT</option>
+            <option value="MEAT">MEAT</option>
+            <option value="ALCOHOLIC_BEVERAGES">ALCOHOLIC_BEVERAGES</option>
+        </select>
+    </label><br/>
+    <label><input name="name" placeholder="Название" type="text"></label> <br/>
+    <label><input name="price" placeholder="цена" type="text"></label> <br/>
+    <label><input name="discount" placeholder="Скидка" type="text"></label> <br/>
     <input type="submit" value="Сохранить">
 </form>
-<a href="/webproject-1.0-SNAPSHOT/menu/content" target="content">Back</a>
-<jsp:include page="footer.jsp"></jsp:include>
+<a href="${pageContext.request.contextPath}/menu/content" target="content">Back</a>
+<br>
+<br>
+<%@include file="footer.jsp"%>
+<br>
+<br>
 </body>
 </html>

@@ -1,17 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kasya
-  Date: 20.03.2021
-  Time: 22:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
-<%--    <!--[if lt IE 9]>--%>
-<%--    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>--%>
-<%--    <![endif]-->--%>
     <style>
         body { margin: 0; }
         header {
@@ -21,12 +11,12 @@
         }
         .header-bg {
             background: url(img/topImg.jpg) repeat-x center bottom;
-            height: 250px; /* Высота шапки */
-            text-align: center; /* Выравнивание по центру */
+            height: 250px;
+            text-align: center;
         }
         .header-bg img {
-            position: relative; /* Относительное позиционирование */
-            top: 40px; /* Сдвигаем картинку вниз */
+            position: relative;
+            top: 40px;
         }
     </style>
 </head>
