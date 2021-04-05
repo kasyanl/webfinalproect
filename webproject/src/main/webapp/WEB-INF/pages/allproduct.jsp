@@ -13,11 +13,11 @@
 <table class="table" align="center">
     <tr>
     <th colspan="2" width="100" align="center"><b> ID</b></th>
-    <th colspan="2" align="center"><b> категории</b></th>
-    <th colspan="2" align="center"><b> названию</b></th>
-    <th colspan="2" width="100" align="center"><b> цене</b></th>
-    <th colspan="2" width="100" align="center"><b> скидке</b></th>
-    <th colspan="2"width="100" align="center"><b> конечной цене</b></th>
+    <th colspan="2" align="center"><b> категория</b></th>
+    <th colspan="2" align="center"><b> название</b></th>
+    <th colspan="2" width="100" align="center"><b> цена</b></th>
+    <th colspan="2" width="100" align="center"><b> скидка</b></th>
+    <th colspan="2"width="100" align="center"><b> конечная цена</b></th>
     <td></td>
     <td></td>
     </tr>
@@ -48,12 +48,12 @@
         </tr>
     </c:forEach>
     <tr>
-        <th colspan="2" width="100" style="text-align: center;"><b> ID</b></th>
-        <th colspan="2" align="center"><b> категории</b></th>
-        <th colspan="2" align="center"><b> названию</b></th>
-        <th colspan="2" width="100" align="center"><b> цене</b></th>
-        <th colspan="2" width="100" align="center"><b> скидке</b></th>
-        <th colspan="2"width="100" align="center"><b> конечной цене</b></th>
+        <th colspan="2" width="100" align="center"><b> ID</b></th>
+        <th colspan="2" align="center"><b> категория</b></th>
+        <th colspan="2" align="center"><b> название</b></th>
+        <th colspan="2" width="100" align="center"><b> цена</b></th>
+        <th colspan="2" width="100" align="center"><b> скидка</b></th>
+        <th colspan="2"width="100" align="center"><b> конечная цена</b></th>
         <td></td>
         <td></td>
     </tr>

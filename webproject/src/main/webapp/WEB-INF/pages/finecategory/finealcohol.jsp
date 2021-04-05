@@ -11,36 +11,36 @@
 <h1>Продукты категории ALCOHOLIC_BEVERAGES:</h1>
 <table class="table" align="center">
     <tr>
-    <td><b> ID</b></td>
-    <td><b> категории</b></td>
-    <td><b> названию</b></td>
-    <td><b> цене</b></td>
-    <td><b> скидке</b></td>
-    <td><b> конечной цене</b></td>
-    <td></td>
-    <td></td>
+        <th width="100" align="center"><b> ID</b></th>
+        <th><b> категория</b></th>
+        <th><b> название</b></th>
+        <th width="100" align="center"><b> цена</b></th>
+        <th width="100" align="center"><b> скидка</b></th>
+        <th width="100" align="center"><b> конечная цена</b></th>
+        <th></th>
+        <th></th>
     </tr>
     <c:forEach var="product" items="${product}">
         <tr>
-            <td colspan="2" align="center"><c:out value="${product.getId()}"/></td>
-            <td colspan="2" align="center"><c:out value="${product.getCategory()}"/></td>
-            <td colspan="2" align="center"><c:out value="${product.getName()}"/></td>
-            <td colspan="2" align="center"><c:out value="${product.getPrice()}"/></td>
-            <td colspan="2" align="center"><c:out value="${product.getDiscount()}"/></td>
-            <td colspan="2" align="center"><c:out value="${product.getActualPrice()}"/></td>
-            <td colspan="2" align="center"><a href="${pageContext.request.contextPath}/product/deleteproduct?id=${product.getId()}">Удалить</a></td>
-            <td colspan="2" align="center"><a href="${pageContext.request.contextPath}/product/editproduct?id=${product.getId()}">Изменить</a></td>
+            <td><c:out value="${product.getId()}"/></td>
+            <td><c:out value="${product.getCategory()}"/></td>
+            <td><c:out value="${product.getName()}"/></td>
+            <td><c:out value="${product.getPrice()}"/></td>
+            <td><c:out value="${product.getDiscount()}"/></td>
+            <td><c:out value="${product.getActualPrice()}"/></td>
+            <td><a href="${pageContext.request.contextPath}/product/deleteproduct?id=${product.getId()}">Удалить</a></td>
+            <td><a href="${pageContext.request.contextPath}/product/editproduct?id=${product.getId()}">Изменить</a></td>
         </tr>
     </c:forEach>
     <tr>
-        <td><b> ID</b></td>
-        <td><b> категории</b></td>
-        <td><b> названию</b></td>
-        <td><b> цене</b></td>
-        <td><b> скидке</b></td>
-        <td><b> конечной цене</b></td>
-        <td></td>
-        <td></td>
+        <th><b> ID</b></th>
+        <th><b> категория</b></th>
+        <th><b> название</b></th>
+        <th><b> цена</b></th>
+        <th><b> скидка</b></th>
+        <th><b> конечная цена</b></th>
+        <th></th>
+        <th></th>
     </tr>
 </table>
 <a href="${pageContext.request.contextPath}/selectcategorybyread" target="content">Back</a>
