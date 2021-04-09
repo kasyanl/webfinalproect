@@ -1,6 +1,7 @@
 package kasyan.controller;
 
 import kasyan.exceptions.ProductNotFoundException;
+import kasyan.service.ExportToExcel;
 import kasyan.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -208,6 +209,50 @@ public class ProductController {
         modelAndView.addObject("product", productService.fineCategoryForRead("MEAT"));
         return modelAndView;
     }
+
+    @GetMapping(value = "/exportexcel/alcohol")
+    public ModelAndView exportExcelAlcohol() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("exportexcel/alcohol");
+        modelAndView.addObject("product", ExportToExcel.exportCategoryList("ALCOHOLIC_BEVERAGES"));
+        return modelAndView;
+    }
+    @GetMapping(value = "/exportexcel/berries")
+    public ModelAndView exportExcelBerries() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("exportexcel/berries");
+        modelAndView.addObject("product", ExportToExcel.exportCategoryList("BERRIES"));
+        return modelAndView;
+    }
+    @GetMapping(value = "/exportexcel/fruits")
+    public ModelAndView exportExcelFruits() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("exportexcel/fruits");
+        modelAndView.addObject("product", ExportToExcel.exportCategoryList("FRUITS"));
+        return modelAndView;
+    }
+    @GetMapping(value = "/exportexcel/meat")
+    public ModelAndView exportExcelMeat() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("exportexcel/meat");
+        modelAndView.addObject("product", ExportToExcel.exportCategoryList("MEAT"));
+        return modelAndView;
+    }
+    @GetMapping(value = "/exportexcel/milk")
+    public ModelAndView exportExcelMikl() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("exportexcel/milk");
+        modelAndView.addObject("product", ExportToExcel.exportCategoryList("MILK_PRODUCT"));
+        return modelAndView;
+    }
+    @GetMapping(value = "/exportexcel/vegetables")
+    public ModelAndView exportExcelVegetables() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("exportexcel/vegetables");
+        modelAndView.addObject("product", ExportToExcel.exportCategoryList("VEGETABLES"));
+        return modelAndView;
+    }
+
 
     @ExceptionHandler(ProductNotFoundException.class)
     public ModelAndView handleStudentNotFoundException(ProductNotFoundException exception) {

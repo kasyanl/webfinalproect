@@ -10,6 +10,7 @@
 <h1>Весь список продуктов</h1>
 <br>
 <h3>сортировка по установленной скидке</h3>
+<h3 align="right"><a href="${pageContext.request.contextPath}/product/exportexcel" target="content" >Экспорт в Excel файл</a></h3>
 <br>
 <<table class="table" align="center">
     <th colspan="2" width="100" align="center"><b> ID</b></th>

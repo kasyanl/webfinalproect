@@ -53,8 +53,8 @@ public class ProductService {
         return productDataBase.findById(id);
     }
 
-    public List<Product> findAll() {
-        return productDataBase.findAll();
+    public static List<Product> findAll() {
+        return ProductDataBase.findAll();
     }
 
     public void delete(int id) {
@@ -70,7 +70,7 @@ public class ProductService {
         product.setActualPrice(calculating(product.getPrice(), product.getDiscount()));
     }
 
-    public List<Product> fineCategoryForRead(String category) {
+    public static List<Product> fineCategoryForRead(String category) {
         List<Product> newListForRead = new ArrayList<>();
         for (Product product : listProduct) {
             if (product.getCategory().equals(category)) {
@@ -82,18 +82,18 @@ public class ProductService {
 
     public List<Product> sortList(int sort) {
         switch (sort) {
-            case 1 -> SortDataBase.sortById(listProduct);
-            case 2 -> SortDataBase.sortByIdReverse(listProduct);
-            case 3 -> SortDataBase.sortByCategory(listProduct);
-            case 4 -> SortDataBase.sortByCategoryReverse(listProduct);
-            case 5 -> SortDataBase.sortByName(listProduct);
-            case 6 -> SortDataBase.sortByNameReverse(listProduct);
-            case 7 -> SortDataBase.sortByPrice(listProduct);
-            case 8 -> SortDataBase.sortByPriceReverse(listProduct);
-            case 9 -> SortDataBase.sortByDiscount(listProduct);
-            case 10 -> SortDataBase.sortByDiscountReverse(listProduct);
-            case 11 -> SortDataBase.sortByActualPrice(listProduct);
-            case 12 -> SortDataBase.sortByActualPriceReverse(listProduct);
+            case 1: SortDataBase.sortById(listProduct); break;
+            case 2: SortDataBase.sortByIdReverse(listProduct); break;
+            case 3: SortDataBase.sortByCategory(listProduct); break;
+            case 4: SortDataBase.sortByCategoryReverse(listProduct); break;
+            case 5: SortDataBase.sortByName(listProduct); break;
+            case 6: SortDataBase.sortByNameReverse(listProduct); break;
+            case 7: SortDataBase.sortByPrice(listProduct); break;
+            case 8: SortDataBase.sortByPriceReverse(listProduct); break;
+            case 9: SortDataBase.sortByDiscount(listProduct); break;
+            case 10: SortDataBase.sortByDiscountReverse(listProduct);
+            case 11: SortDataBase.sortByActualPrice(listProduct); break;
+            case 12: SortDataBase.sortByActualPriceReverse(listProduct); break;
         }
         return listProduct;
     }

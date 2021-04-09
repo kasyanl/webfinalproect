@@ -11,6 +11,9 @@ import java.util.List;
 @Repository
 public class ProductDataBase implements ProductRepository, InitializingBean {
 
+    public static List<Product> createList (){
+        return listProduct;
+    }
 
     static {
         listProduct.add(ProductService.creatProduct("FRUITS", "Apple", 10.0, 50.0));
@@ -34,7 +37,7 @@ public class ProductDataBase implements ProductRepository, InitializingBean {
     }
 
 
-    public List<Product> findAll() {
+    public static List<Product> findAll() {
         return listProduct;
     }
 

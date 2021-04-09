@@ -9,7 +9,9 @@
 <body align="center" background="/resources/img/backgroung.png" bgcolor="#CCFFCC" >
 <%@include file="header.jsp"%>
 <h1>Весь список продуктов</h1>
-<%--<%@include file="sort/sorttypedown.jsp"%>--%>
+
+<h3 align="right"><a href="${pageContext.request.contextPath}/exportexcel" target="content" >Экспорт в Excel файл</a></h3>
+
 <table class="table" align="center">
     <tr>
     <th colspan="2" width="100" align="center"><b> ID</b></th>

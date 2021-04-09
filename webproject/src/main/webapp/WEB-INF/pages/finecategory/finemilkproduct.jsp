@@ -9,6 +9,7 @@
 <body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}/page/img/backgroung.png">
 <%@include file="../header.jsp"%>
 <h1>Продукты категории MILK_PRODUCT:</h1>
+<h3 align="right"><a href="${pageContext.request.contextPath}/product/exportexcel/milk" target="content" >Экспорт в Excel файл</a></h3>
 <table class="table" align="center">
     <tr>
         <th width="100" align="center"><b> ID</b></th>
