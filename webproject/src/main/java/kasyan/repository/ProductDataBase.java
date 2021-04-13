@@ -11,10 +11,6 @@ import java.util.List;
 @Repository
 public class ProductDataBase implements ProductRepository, InitializingBean {
 
-    public static List<Product> createList (){
-        return listProduct;
-    }
-
     static {
         listProduct.add(ProductService.creatProduct("FRUITS", "Apple", 10.0, 50.0));
         listProduct.add(ProductService.creatProduct("FRUITS", "Orange", 12.10, 10.0));

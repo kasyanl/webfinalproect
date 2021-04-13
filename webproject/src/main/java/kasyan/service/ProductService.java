@@ -58,7 +58,7 @@ public class ProductService {
     }
 
     public void delete(int id) {
-       productDataBase.deleteById(id);
+        productDataBase.deleteById(id);
     }
 
     public void update(int id, String category, String name, double price, double discount) throws ProductNotFoundException {
@@ -82,21 +82,45 @@ public class ProductService {
 
     public List<Product> sortList(int sort) {
         switch (sort) {
-            case 1: SortDataBase.sortById(listProduct); break;
-            case 2: SortDataBase.sortByIdReverse(listProduct); break;
-            case 3: SortDataBase.sortByCategory(listProduct); break;
-            case 4: SortDataBase.sortByCategoryReverse(listProduct); break;
-            case 5: SortDataBase.sortByName(listProduct); break;
-            case 6: SortDataBase.sortByNameReverse(listProduct); break;
-            case 7: SortDataBase.sortByPrice(listProduct); break;
-            case 8: SortDataBase.sortByPriceReverse(listProduct); break;
-            case 9: SortDataBase.sortByDiscount(listProduct); break;
-            case 10: SortDataBase.sortByDiscountReverse(listProduct);
-            case 11: SortDataBase.sortByActualPrice(listProduct); break;
-            case 12: SortDataBase.sortByActualPriceReverse(listProduct); break;
+            case 1:
+                SortDataBase.sortById(listProduct);
+                break;
+            case 2:
+                SortDataBase.sortByIdReverse(listProduct);
+                break;
+            case 3:
+                SortDataBase.sortByCategory(listProduct);
+                break;
+            case 4:
+                SortDataBase.sortByCategoryReverse(listProduct);
+                break;
+            case 5:
+                SortDataBase.sortByName(listProduct);
+                break;
+            case 6:
+                SortDataBase.sortByNameReverse(listProduct);
+                break;
+            case 7:
+                SortDataBase.sortByPrice(listProduct);
+                break;
+            case 8:
+                SortDataBase.sortByPriceReverse(listProduct);
+                break;
+            case 9:
+                SortDataBase.sortByDiscount(listProduct);
+                break;
+            case 10:
+                SortDataBase.sortByDiscountReverse(listProduct);
+            case 11:
+                SortDataBase.sortByActualPrice(listProduct);
+                break;
+            case 12:
+                SortDataBase.sortByActualPriceReverse(listProduct);
+                break;
         }
         return listProduct;
     }
+
     @Autowired
     public void setProductDataBase(ProductDataBase productDataBase) {
         this.productDataBase = productDataBase;

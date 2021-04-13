@@ -3,7 +3,7 @@
 <body align="center" bgcolor="#CCFFCC" background="img/backgroung.png">
 <%@include file="header.jsp"%>
 <h1><%= request.getAttribute("message") %></h1>
-<a href="${pageContext.request.contextPath}/menu/content" target="content">Home</a>
+<a href="${pageContext.request.contextPath}/content" target="content">Home</a>
 <%@include file="footer.jsp"%>
 </body>
 </html>

@@ -5,7 +5,7 @@
 </head>
 <frameset cols="300,*">
     <frame src="/sidebar" name="sidebar">
-    <frame src="/content" name="content">
+    <frame src="/person/startlogin" name="content">
 
 </frameset>
 </html>

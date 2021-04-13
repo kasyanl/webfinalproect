@@ -40,7 +40,7 @@ public class ProductController {
                             @RequestParam(value = "price") double price,
                             @RequestParam(value = "discount") double discount) {
         productService.save(category, name, price, discount);
-        return new ModelAndView("redirect:allproduct");
+        return new ModelAndView("redirect:product/allproduct");
     }
 
     @GetMapping(value = "/deleteproduct")
@@ -49,7 +49,7 @@ public class ProductController {
         return new ModelAndView("redirect:allproduct");
     }
 
-    @GetMapping(value = "/editproduct")
+     @GetMapping(value = "/editproduct")
     public ModelAndView edit(@RequestParam(value = "id") int id) throws ProductNotFoundException {
         ModelAndView modelAndView = new ModelAndView("editproduct");
         modelAndView.addObject("product", productService.findById(id));

@@ -22,7 +22,7 @@
     <label><input name="discount" placeholder="Скидка" type="number"></label> <br/>
     <input type="submit" value="Сохранить">
 </form>
-<a href="${pageContext.request.contextPath}/menu/content" target="content">Back</a>
+<a href="${pageContext.request.contextPath}/content" target="content">Back</a>
 <br>
 <br>
 <%@include file="footer.jsp"%>

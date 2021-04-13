@@ -13,6 +13,7 @@
 <h3 align="right"><a href="${pageContext.request.contextPath}/exportexcel" target="content" >Экспорт в Excel файл</a></h3>
 <br>
 <<table class="table" align="center">
+    <tr>
     <th colspan="2" width="100" align="center"><b> ID</b></th>
     <th colspan="2" align="center"><b> категории</b></th>
     <th colspan="2" align="center"><b> названию</b></th>
@@ -34,8 +35,8 @@
         <th><a href="${pageContext.request.contextPath}/product/sortbydiscount" target="content">&#x21D1; </a></th>
         <th><a href="${pageContext.request.contextPath}/product/sortbydiscountreverse" target="content">&#x21D3; </a></th>
         <th><a href="${pageContext.request.contextPath}/product/sortbyactualprice" target="content">&#x21D1; </a></th>
-        <th><a href="${pageContext.request.contextPath}/product/sortbyactualpricereverse" target="content">&#x21D3; </a>
-        </th>
+        <th><a href="${pageContext.request.contextPath}/product/sortbyactualpricereverse" target="content">&#x21D3; </a></th>
+
     </tr>
     <c:forEach var="product" items="${product}">
         <tr>

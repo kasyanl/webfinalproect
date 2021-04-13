@@ -29,8 +29,8 @@
             <td><c:out value="${product.getPrice()}"/></td>
             <td><c:out value="${product.getDiscount()}"/></td>
             <td><c:out value="${product.getActualPrice()}"/></td>
-            <td><a href="${pageContext.request.contextPath}/product/deleteproduct.jsp?id=${product.getId()}">Удалить</a></td>
-            <td><a href="${pageContext.request.contextPath}/product/editproduct.jsp?id=${product.getId()}">Изменить</a></td>
+            <td><a href="${pageContext.request.contextPath}/product/deleteproduct?id=${product.getId()}">Удалить</a></td>
+            <td><a href="${pageContext.request.contextPath}/product/editproduct?id=${product.getId()}">Изменить</a></td>
         </tr>
     </c:forEach>
     <tr>

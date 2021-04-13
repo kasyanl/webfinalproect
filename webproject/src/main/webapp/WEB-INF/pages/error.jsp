@@ -6,7 +6,7 @@
 <body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}/img/backgroung.png">
 <%@include file="header.jsp"%>
 <h1><%=request.getAttribute("error")%></h1>
-<a href="${pageContext.request.contextPath}/menu/content" target="content">Home</a>
+<a href="${pageContext.request.contextPath}/content" target="content">Home</a>
 <%@include file="footer.jsp"%>
 </body>
 </html>
