@@ -7,10 +7,10 @@
             margin: 0 auto 50px;
         }
         #footer {
-
+            position: fixed;
             left: 0; bottom: 0;
             padding: 10px;
-            background: #39b54a;
+            background: #F5DEB3;
             color: #fff;
             width: 100%;
         }
@@ -18,8 +18,8 @@
 </head>
 <body>
 <div id="footer">
-    &copy; kasyanl<br>
-    <a href="https://moodle.jrr.by/">Курсы по JAVA on-line</a>
+   <font color="black"> &copy; kasyanl<br>
+       <a href="https://moodle.jrr.by/">Курсы по JAVA on-line</a></font>
   </div>
 </body>
 </html>
