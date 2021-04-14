@@ -111,6 +111,7 @@ public class ProductService {
                 break;
             case 10:
                 SortDataBase.sortByDiscountReverse(listProduct);
+                break;
             case 11:
                 SortDataBase.sortByActualPrice(listProduct);
                 break;

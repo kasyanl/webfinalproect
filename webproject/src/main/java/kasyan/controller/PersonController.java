@@ -18,7 +18,7 @@ public class PersonController {
 
     @GetMapping(value = "/startlogin")
     public String startLogin() {
-        return "startlogin";
+        return "index";
     }
 
     @PostMapping(value = "/startlogin")

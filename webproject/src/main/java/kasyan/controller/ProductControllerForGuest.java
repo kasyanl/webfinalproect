@@ -10,245 +10,203 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping(value = "/product")
-public class ProductController {
+public class ProductControllerForGuest {
+
 
     private ProductService productService;
 
-    @GetMapping(value = "/allproduct")
+    @GetMapping(value = "/allproductguest")
     public ModelAndView findAll() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/allproduct");
+        modelAndView.setViewName("guestpages/allproductguest");
         modelAndView.addObject("product", ProductService.findAll());
         return modelAndView;
     }
 
-    @GetMapping
-    public ModelAndView findById(@RequestParam(value = "id") int id) throws ProductNotFoundException {
-        ModelAndView modelAndView = new ModelAndView("productcard");
-        modelAndView.addObject("product", productService.findById(id));
-        return modelAndView;
-    }
 
-    @GetMapping(value = "/addproduct")
-    public String addproduct() {
-        return "adminpages/addproduct";
-    }
-
-    @PostMapping(value = "/addproduct")
-    public ModelAndView add(@RequestParam(value = "category") String category,
-                            @RequestParam(value = "name") String name,
-                            @RequestParam(value = "price") double price,
-                            @RequestParam(value = "discount") double discount) {
-        productService.save(category, name, price, discount);
-        return new ModelAndView("redirect:/product/allproduct");
-    }
-
-    @GetMapping(value = "/deleteproduct")
-    public ModelAndView deleteproduct(@RequestParam(value = "id") int id) {
-          productService.delete(id);
-        return new ModelAndView("adminpages/deleteproduct");
-    }
-
-     @GetMapping(value = "/editproduct")
-    public ModelAndView edit(@RequestParam(value = "id") int id) throws ProductNotFoundException {
-        ModelAndView modelAndView = new ModelAndView("adminpages/editproduct");
-        modelAndView.addObject("product", productService.findById(id));
-        return modelAndView;
-    }
-
-    @PostMapping(value = "/editproduct")
-    public ModelAndView edit(@RequestParam(value = "id") int id,
-                             @RequestParam(value = "category") String category,
-                             @RequestParam(value = "name") String name,
-                             @RequestParam(value = "price") double price,
-                             @RequestParam(value = "discount") double discount) throws ProductNotFoundException {
-        productService.update(id, category, name, price, discount);
-        return new ModelAndView("redirect:/product/allproduct");
-    }
-
-    @GetMapping(value = "/sortbyid")
+    @GetMapping(value = "/sortbyidguest")
     public ModelAndView sortById() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbyid");
+        modelAndView.setViewName("guestpages/sort/sortbyidguest");
         modelAndView.addObject("product", productService.sortList(1));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbyidreverse")
+    @GetMapping(value = "/sortbyidreverseguest")
     public ModelAndView sortByIdReverse() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbyidreverse");
+        modelAndView.setViewName("guestpages/sort/sortbyidreverseguest");
         modelAndView.addObject("product", productService.sortList(2));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbycategory")
+    @GetMapping(value = "/sortbycategoryguest")
     public ModelAndView sortByCategory() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbycategory");
+        modelAndView.setViewName("guestpages/sort/sortbycategoryguest");
         modelAndView.addObject("product", productService.sortList(3));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbycategoryreverse")
+    @GetMapping(value = "/sortbycategoryreverseguest")
     public ModelAndView sortByCategoryReverse() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbycategoryreverse");
+        modelAndView.setViewName("guestpages/sort/sortbycategoryreverseguest");
         modelAndView.addObject("product", productService.sortList(4));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbyname")
+    @GetMapping(value = "/sortbynameguest")
     public ModelAndView sortByName() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbyname");
+        modelAndView.setViewName("guestpages/sort/sortbynameguest");
         modelAndView.addObject("product", productService.sortList(5));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbynamereverse")
+    @GetMapping(value = "/sortbynamereverseguest")
     public ModelAndView sortByNameReverse() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbynamereverse");
+        modelAndView.setViewName("guestpages/sort/sortbynamereverseguest");
         modelAndView.addObject("product", productService.sortList(6));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbyprice")
+    @GetMapping(value = "/sortbypriceguest")
     public ModelAndView sortByPrice() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbyprice");
+        modelAndView.setViewName("guestpages/sort/sortbypriceguest");
         modelAndView.addObject("product", productService.sortList(7));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbypricereverse")
+    @GetMapping(value = "/sortbypricereverseguest")
     public ModelAndView sortByPriceReverse() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbypricereverse");
+        modelAndView.setViewName("guestpages/sort/sortbypricereverseguest");
         modelAndView.addObject("product", productService.sortList(8));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbydiscount")
+    @GetMapping(value = "/sortbydiscountguest")
     public ModelAndView sortByDiscount() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbydiscount");
+        modelAndView.setViewName("guestpages/sort/sortbydiscountguest");
         modelAndView.addObject("product", productService.sortList(9));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbydiscountreverse")
+    @GetMapping(value = "/sortbydiscountreverseguest")
     public ModelAndView sortByDiscountReverse() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbydiscountreverse");
+        modelAndView.setViewName("guestpages/sort/sortbydiscountreverseguest");
         modelAndView.addObject("product", productService.sortList(10));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbyactualprice")
+    @GetMapping(value = "/sortbyactualpriceguest")
     public ModelAndView sortByActualPrice() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbyactualprice");
+        modelAndView.setViewName("guestpages/sort/sortbyactualpriceguest");
         modelAndView.addObject("product", productService.sortList(11));
         return modelAndView;
     }
 
-    @GetMapping(value = "/sortbyactualpricereverse")
+    @GetMapping(value = "/sortbyactualpricereverseguest")
     public ModelAndView sortByActualPriceReverse() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/sort/sortbyactualpricereverse");
+        modelAndView.setViewName("guestpages/sort/sortbyactualpricereverseguest");
         modelAndView.addObject("product", productService.sortList(12));
         return modelAndView;
     }
 
-    @GetMapping(value = "/finefruits")
+    @GetMapping(value = "/finefruitsguest")
     public ModelAndView fineFruits() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/finecategory/finefruits");
+        modelAndView.setViewName("guestpages/finecategory/finefruitsguest");
         modelAndView.addObject("product", ProductService.fineCategoryForRead("FRUITS"));
         return modelAndView;
     }
 
-    @GetMapping(value = "/fineberries")
+    @GetMapping(value = "/fineberriesguest")
     public ModelAndView fineBerries() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/finecategory/fineberries");
+        modelAndView.setViewName("guestpages/finecategory/fineberriesguest");
         modelAndView.addObject("product", ProductService.fineCategoryForRead("BERRIES"));
         return modelAndView;
     }
 
-    @GetMapping(value = "/finevegetables")
+    @GetMapping(value = "/finevegetablesguest")
     public ModelAndView fineVegetables() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/finecategory/finevegetables");
+        modelAndView.setViewName("guestpages/finecategory/finevegetablesguest");
         modelAndView.addObject("product", ProductService.fineCategoryForRead("VEGETABLES"));
         return modelAndView;
     }
 
-    @GetMapping(value = "/finemilkproduct")
+    @GetMapping(value = "/finemilkproductguest")
     public ModelAndView fineMilkProduct() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/finecategory/finemilkproduct");
+        modelAndView.setViewName("guestpages/finecategory/finemilkproductguest");
         modelAndView.addObject("product", ProductService.fineCategoryForRead("MILK_PRODUCT"));
         return modelAndView;
     }
 
-    @GetMapping(value = "/finealcohol")
+    @GetMapping(value = "/finealcoholguest")
     public ModelAndView fineAlcohol() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/finecategory/finealcohol");
+        modelAndView.setViewName("guestpages/finecategory/finealcoholguest");
         modelAndView.addObject("product", ProductService.fineCategoryForRead("ALCOHOLIC_BEVERAGES"));
         return modelAndView;
     }
 
-    @GetMapping(value = "/finemeat")
+    @GetMapping(value = "/finemeatguest")
     public ModelAndView fineMeat() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/finecategory/finemeat");
+        modelAndView.setViewName("guestpages/finecategory/finemeatguest");
         modelAndView.addObject("product", ProductService.fineCategoryForRead("MEAT"));
         return modelAndView;
     }
 
-    @GetMapping(value = "/exportexcel/alcohol")
+    @GetMapping(value = "/exportexcel/alcoholguest")
     public ModelAndView exportExcelAlcohol() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/exportexcel/alcohol");
+        modelAndView.setViewName("guestpages/exportexcel/alcoholguest");
         modelAndView.addObject("product", ExportToExcel.exportCategoryList("ALCOHOLIC_BEVERAGES"));
         return modelAndView;
     }
-    @GetMapping(value = "/exportexcel/berries")
+    @GetMapping(value = "/exportexcel/berriesguest")
     public ModelAndView exportExcelBerries() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/exportexcel/berries");
+        modelAndView.setViewName("guestpages/exportexcel/berriesguest");
         modelAndView.addObject("product", ExportToExcel.exportCategoryList("BERRIES"));
         return modelAndView;
     }
-    @GetMapping(value = "/exportexcel/fruits")
+    @GetMapping(value = "/exportexcel/fruitsguest")
     public ModelAndView exportExcelFruits() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/exportexcel/fruits");
+        modelAndView.setViewName("guestpages/exportexcel/fruitsguest");
         modelAndView.addObject("product", ExportToExcel.exportCategoryList("FRUITS"));
         return modelAndView;
     }
-    @GetMapping(value = "/exportexcel/meat")
+    @GetMapping(value = "/exportexcel/meatguest")
     public ModelAndView exportExcelMeat() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/exportexcel/meat");
+        modelAndView.setViewName("guestpages/exportexcel/meatguest");
         modelAndView.addObject("product", ExportToExcel.exportCategoryList("MEAT"));
         return modelAndView;
     }
-    @GetMapping(value = "/exportexcel/milk")
+    @GetMapping(value = "/exportexcel/milkguest")
     public ModelAndView exportExcelMikl() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/exportexcel/milk");
+        modelAndView.setViewName("guestpages/exportexcel/milkguest");
         modelAndView.addObject("product", ExportToExcel.exportCategoryList("MILK_PRODUCT"));
         return modelAndView;
     }
-    @GetMapping(value = "/exportexcel/vegetables")
+    @GetMapping(value = "/exportexcel/vegetablesguest")
     public ModelAndView exportExcelVegetables() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("adminpages/exportexcel/vegetables");
+        modelAndView.setViewName("guestpages/exportexcel/vegetablesguest");
         modelAndView.addObject("product", ExportToExcel.exportCategoryList("VEGETABLES"));
         return modelAndView;
     }
@@ -262,9 +220,8 @@ public class ProductController {
     }
 
     @Autowired
-    public void setProductService(ProductService productService) {
+    public void setStudentService(ProductService productService) {
         this.productService = productService;
     }
 
 }
-

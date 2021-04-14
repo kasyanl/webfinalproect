@@ -10,7 +10,8 @@
 <head>
     <title>Title</title>
 </head>
-<body align="center" background="/resources/img/backgroung.png" bgcolor="#CCFFCC" >
+<body hight="center" align="center" background="/resources/img/backgroung.png" bgcolor="#CCFFCC" >
+<%@include file="header.jsp"%>
 <h4>Логин и/или пароль не верен. Пожалуйста, повторите попытку</h4>
 
 <form action="${pageContext.request.contextPath}/person/startlogin" method="post">

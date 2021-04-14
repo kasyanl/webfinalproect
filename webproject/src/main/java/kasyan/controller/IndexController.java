@@ -19,23 +19,39 @@ public class IndexController {
 
     @GetMapping(value = "/content")
     public String content() {
-        return "content";
+        return "adminpages/content";
     }
 
-    @GetMapping(value = "/sidebar")
-    public String sidebar() {
-        return "sidebar";
+    @GetMapping(value = "/contentguest")
+    public String contentguest() {
+        return "guestpages/contentguest";
     }
+//    @GetMapping(value = "/sidebar")
+//    public String sidebar() {
+//        return "sidebar";
+//    }
 
     @GetMapping(value = "/selectcategorybyread")
     public String selectCategoryByRead() {
-        return "selectcategorybyread";
+        return "adminpages/selectcategorybyread";
+    }
+
+    @GetMapping(value = "/selectcategorybyreadguest")
+    public String selectCategoryByReadGuest() {
+        return "guestpages/selectcategorybyreadguest";
     }
 
     @GetMapping(value = "/exportexcel")
     public ModelAndView exportExcel() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("exportexcel");
+        modelAndView.setViewName("adminpages/exportexcel");
+        modelAndView.addObject("product", ExportToExcel.exportAllList(ProductService.findAll()));
+        return modelAndView;
+    }
+    @GetMapping(value = "/exportexcelguest")
+    public ModelAndView exportExcelGuest() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("guestpages/exportexcelguest");
         modelAndView.addObject("product", ExportToExcel.exportAllList(ProductService.findAll()));
         return modelAndView;
     }
