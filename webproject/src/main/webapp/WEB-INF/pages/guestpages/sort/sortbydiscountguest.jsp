@@ -5,7 +5,7 @@
 <head>
     <title>Учет продуктов</title>
 </head>
-<body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}../img/backgroung.png">
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="../../header.jsp"%>
 <%@include file="../navguest.jsp"%>
 <h1>Весь список продуктов</h1>

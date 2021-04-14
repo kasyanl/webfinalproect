@@ -10,7 +10,7 @@
 <head>
     <title>Title</title>
 </head>
-<body hight="center" align="center" background="/resources/img/backgroung.png" bgcolor="#CCFFCC" >
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="header.jsp"%>
 <h3>Вход выполнен</h3>
 <h4><a href="${pageContext.request.contextPath}/content" target="content">Перейти на главную страницу</a></h4>

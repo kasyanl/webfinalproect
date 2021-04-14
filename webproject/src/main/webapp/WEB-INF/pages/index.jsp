@@ -3,8 +3,7 @@
 <head>
     <title>Добро пожаловать</title>
 </head>
-<body hight="center" align="center" bgcolor="#CCFFCC"
-      background="${pageContext.request.contextPath}/img/backgroung.png">
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="header.jsp" %>
 <h2>Добро пожаловать в Систему учета продуктов.
     <br>Для работы с базой данных введите логи и пароль, либо войдите как гость (доступна возможность только просмотра)

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Система учета продуктов</title>
 </head>
-<body align="center" bgcolor="#CCFFCC" background="../img/backgroung.png">
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="../header.jsp"%>
 <h1>Выберите категориию:</h1>
 <div face="arial" size="+1">

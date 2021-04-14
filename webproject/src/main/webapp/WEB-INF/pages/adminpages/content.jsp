@@ -11,7 +11,7 @@
 <head>
     <title>Учет продуктов</title>
 </head>
-<body align="center">
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="../header.jsp"%>
 <%@include file="nav.jsp"%>
 <h1>Система учета продуктов</h1>

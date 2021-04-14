@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>Система учета продуктов</title>
 </head>
-<body align="center" bgcolor="#CCFFCC" background="${pageContext.request.contextPath}/page/img/backgroung.png">
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="../../header.jsp"%>
 <%@include file="../nav.jsp"%>
 <h1>Продукты категории VEGETABLES:</h1>

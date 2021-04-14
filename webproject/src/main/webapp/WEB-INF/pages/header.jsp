@@ -6,12 +6,12 @@
         body { margin: 0; }
         header {
             display: block;
-            background:url(/resources/img/topImg.jpg) repeat-x;
+            background:url(http://skinal.by/images/catal/abstract/1324-Skinal.by.jpg) repeat-x;
             /* Градиент */
         }
         .header-bg {
-            background: url(/resources/img/topImg.jpg) repeat-x center bottom;
-            height: 250px;
+            background: url(http://skinal.by/images/catal/abstract/1324-Skinal.by.jpg) repeat-x center bottom;
+            height: 200px;
             text-align: center;
         }
         .header-bg img {

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Система учета продуктов</title>
 </head>
-<body align="center" background="/resources/img/backgroung.png" bgcolor="#CCFFCC" >
+<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
 <%@include file="../header.jsp"%>
 <%@include file="navguest.jsp"%>
 <h1>Весь список продуктов</h1>
