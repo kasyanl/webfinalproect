@@ -78,7 +78,7 @@ public class ExportToExcel {
             i++;
         }
 
-        String filename = "src//main//webapp//WEB-INF//pages//resources//productlist.xls";
+        String filename = "productlist.xls";
 
         try (FileOutputStream out = new FileOutputStream(filename)) {
             workbook.write(out);

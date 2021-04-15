@@ -3,7 +3,7 @@
 <head>
     <title>Добро пожаловать</title>
 </head>
-<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
+<body align="center" background="http://sensitiv-eysk.ru/wp-content/uploads/2017/06/opera-background-light-blue.jpg" bgcolor="#CCFFCC">
 <%@include file="header.jsp" %>
 <h2>Добро пожаловать в Систему учета продуктов.
     <br>Для работы с базой данных введите логи и пароль, либо войдите как гость (доступна возможность только просмотра)

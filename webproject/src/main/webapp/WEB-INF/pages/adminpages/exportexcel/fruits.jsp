@@ -10,7 +10,7 @@
 <head>
     <title>Title</title>
 </head>
-<body align="center" background="https://img2.goodfon.ru/original/1366x768/2/c7/tekstury-tekstura-uzory-belyy.jpg" bgcolor="#CCFFCC" >
+<body align="center" background="http://sensitiv-eysk.ru/wp-content/uploads/2017/06/opera-background-light-blue.jpg" bgcolor="#CCFFCC">
 <%@include file="../../header.jsp"%>
 <%@include file="../nav.jsp"%>
 <h3>Список список категории <b>FRUITS</b> успешно экспортирован</h3>
